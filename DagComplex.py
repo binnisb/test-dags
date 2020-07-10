@@ -132,7 +132,7 @@ with models.DAG("example_complex", default_args=default_args, schedule_interval=
 
     # Search
     search_catalog = PythonOperator(task_id="search_catalog",
-                                    python_callable=lambda _: sys.stdout.write("search_catalog\n"))
+                                    python_callable=lambda: sys.stdout.write("search_catalog\n"))
 
     search_catalog_result = BashOperator(
         task_id="search_catalog_result", bash_command="echo search_catalog_result"
