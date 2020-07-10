@@ -21,6 +21,7 @@
 Example Airflow DAG that shows the complex DAG structure.
 """
 import sys
+import pandas as pd
 
 from airflow import models
 from airflow.operators.bash_operator import BashOperator
